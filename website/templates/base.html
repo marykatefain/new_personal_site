@@ -28,8 +28,60 @@
 
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
+        <div class="banner">
+          <h1 class="ui header">Mary Kate Fain</h1>
+        </div>
+
+        <div class="ui grey four item menu">
+          <a class="active item">
+            Web Development
+          </a>
+          <a class="item">
+            Activism
+          </a>
+          <a class="item">
+            Writing
+          </a>
+          <a class="item">
+            CV
+          </a>
+        </div>
 
         {% block content %}{% endblock %}
+
+        <div class="ui inverted vertical footer segment">
+          <div class="ui center aligned container">
+            <div class="ui stackable inverted divided grid">
+              <div class="five wide column">
+                <h4 class="ui inverted header">Learn More</h4>
+                <div class="ui inverted link list">
+                  <a href="#" class="item">Web Development</a>
+                  <a href="#" class="item">Activism</a>
+                  <a href="#" class="item">Feminist Writing</a>
+                  <a href="#" class="item">CV</a>
+                </div>
+              </div>
+              <div class="five wide column">
+                <h4 class="ui inverted header">Social Connect</h4>
+                <div class="ui inverted link list">
+                  <a href="#" class="item">GitHub</a>
+                  <a href="#" class="item">GitLab</a>
+                  <a href="#" class="item">LinkedIn</a>
+                </div>
+              </div>
+              <div class="five wide column">
+                <h4 class="ui inverted header">Contact</h4>
+                <div class="ui inverted link list">
+                  <a href="#" class="item">Email: mk@marykatefain.com</a>
+                  <a href="#" class="item">IRC: @marykatefain:matrix.org</a>
+                </div>
+              </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p>Sharing is caring. Licensed under the AGPL 3.0</p>
+            </div>
+          </div>
+        </div>
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/website.js' %}"></script>

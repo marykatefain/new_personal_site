@@ -3,9 +3,32 @@
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
-    <h1>Welcome to your new Wagtail site!</h1>
+<div class="ui container">
+    <h2 class="ui center aligned header">Things I Do</h2>
 
-    <p>You can access the admin interface <a href="{% url 'wagtailadmin_home' %}">here</a> (make sure you have run "./manage.py createsuperuser" in the console first).</p>
+    <div class="ui link centered cards">
+      <div class="card">
+        <div class="image">
+          <img src="http://placehold.it/600x600">
+        </div>
+        <div class="content">
+          <div class="header">Full Stack Web Developer</div>
+          <div class="meta">
+            <a>Candlewaster Web Collective</a>
+          </div>
+          <div class="description">
+            Specializing in Django based websites.
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <p>If you haven't already given the documentation a read, head over to <a href="http://docs.wagtail.io/">http://docs.wagtail.io</a> to start building on Wagtail</p>
+    <h2 class="ui center aligned header">About MK</h2>
+
+    <div class="ui container">
+      <img class="ui medium circular image" src="http://placehold.it/600x600">
+      <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p>
+    </div>
+
+</div>
 {% endblock %}
