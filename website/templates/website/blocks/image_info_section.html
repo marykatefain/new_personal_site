@@ -1,0 +1,9 @@
+{% load wagtailimages_tags %}
+
+<h2 class="ui center aligned header">{{ self.headline }}</h2>
+
+<div class="ui container">
+  {% image self.image fill-600x600 as image %}
+  <img class="ui medium circular image" src="{{ image.url }}">
+  <p>{{ self.body }}</p>
+</div>
