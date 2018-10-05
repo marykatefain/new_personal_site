@@ -3,20 +3,20 @@
 {% for link in self.link %}
   <a href="{{ link.url }}">
 {% endfor %}
-  <div class="card">
-    <div class="image">
+  <div class="ui card">
+    <div class="ui fluid image">
       {% image self.image fill-300x300 as image %}
       <img src="{{ image.url }}">
     </div>
     <div class="content">
-      <div class="header">{{ self.headline }}</div>
-      <div class="meta">
+      <div class="ui header">{{ self.headline }}</div>
+      <div class="ui meta">
         <a>{{ self.subtitle }}</a>
       </div>
-      <div class="description">
+      <div class="ui description">
         {{ self.description }}
       </div>
-      <div class="extra content">
+      <div class="ui extra content">
         <span>
           <i class="terminal icon"></i>
           {{ self.technologies }}

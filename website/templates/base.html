@@ -33,18 +33,12 @@
         </div>
 
         <div class="ui grey four item stackable menu">
-          <a class="item" href="/web-development">
-            Web Development
+          {% for item in request.site.root_page.get_children.live.in_menu %}
+          <a class="item" href="{{ item.url }}">
+            {{ item }}
           </a>
-          <a class="item">
-            Activism
-          </a>
-          <a class="item">
-            Writing
-          </a>
-          <a class="item">
-            CV
-          </a>
+          {% endfor %}
+
         </div>
 
         {% block content %}{% endblock %}
