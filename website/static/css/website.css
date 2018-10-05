@@ -7,11 +7,17 @@
   position: relative;
 }
 
+@media(min-width:1100px){
+  .banner {
+    height: 300px;
+  }
+}
+
 .banner h1.header {
   position: absolute;
   bottom: 0px;
   padding: 10px 40px;
-  font-size: 3vw;
+  font-size: 4vw;
 }
 
 @media(max-width:1100px){
@@ -54,4 +60,33 @@
   justify-content: space-around;
 }
 
-/* HOME STYLES */
+/* INFO SECTION STYLES */
+
+.image-info.ui.segment{
+  display: flex;
+  justify-content: space-around;
+}
+
+.image-info .profile-img {
+  display: flex;
+  align-items: center;
+}
+
+@media(max-width:770px) {
+  .image-info .profile-img {
+    display: none;
+  }
+}
+
+.image-info .about {
+  margin: 0px 20px;
+  max-width: 600px;
+}
+
+.image-info.ui.segment .about p {
+  padding: 5px;
+}
+
+.image-info.ui.segment .about h2 {
+  padding: 10px;
+}
