@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+
+{% block body_class %}template-resumepage{% endblock %}
+
+{% block content %}
+<div class="ui container">
+
+  <div class="ui container">
+    {% include_block page.body %}
+  </div>
+
+</div>
+{% endblock %}

@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'website',
     'website.home',
     'website.portfolio',
+    'website.resume',
+
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
