@@ -8,7 +8,7 @@ from wagtail.core.fields import StreamField
 
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel, MultiFieldPanel
 
-from website.blocks import ImageInfoSection
+from website.blocks import ImageInfoSection, PortalCard
 
 
 class PortfolioPage(Page):

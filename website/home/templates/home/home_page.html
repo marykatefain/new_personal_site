@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
 
 
 {% block body_class %}template-homepage{% endblock %}
@@ -9,20 +10,9 @@
     <h2 class="ui center aligned header">Things I Do</h2>
 
     <div class="ui link stackable centered cards">
-      <div class="card">
-        <div class="image">
-          <img src="http://placehold.it/600x600">
-        </div>
-        <div class="content">
-          <div class="header">Full Stack Web Developer</div>
-          <div class="meta">
-            <a>Candlewaster Web Collective</a>
-          </div>
-          <div class="description">
-            Specializing in Django based websites.
-          </div>
-        </div>
-      </div>
+
+        {% include_block page.portal_cards %}
+
     </div>
 
     {% include_block page.body %}
