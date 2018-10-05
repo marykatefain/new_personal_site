@@ -7,8 +7,6 @@
   position: relative;
 }
 
-
-
 .banner h1.header {
   position: absolute;
   bottom: 0px;
@@ -38,3 +36,22 @@
 .ui.grey.item.stackable.menu {
   margin: 0px 0px 80px;
 }
+
+.container {
+  margin: 80px auto;
+}
+
+/* CARDS - GENERAL */
+
+.ui.cards {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.block-portal_card {
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* HOME STYLES */

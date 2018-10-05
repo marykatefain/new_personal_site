@@ -7,15 +7,17 @@
 
 {% block content %}
 <div class="ui container">
+
+  <div class="ui container">
     <h2 class="ui center aligned header">Things I Do</h2>
-
-    <div class="ui link stackable centered cards">
-
+    <div class="ui link stackable cards">
         {% include_block page.portal_cards %}
-
     </div>
+  </div>
 
+  <div class="ui container">
     {% include_block page.body %}
+  </div>
 
 </div>
 {% endblock %}
