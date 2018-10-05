@@ -1,0 +1,40 @@
+.banner {
+  background-image: url(/static/images/succulents.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  position: relative;
+}
+
+
+
+.banner h1.header {
+  position: absolute;
+  bottom: 0px;
+  padding: 10px 40px;
+  font-size: 3vw;
+}
+
+@media(max-width:1100px){
+  .banner h1.header {
+    font-size: 4.5vw;
+  }
+}
+
+@media(max-width:900px){
+  .banner h1.header {
+    font-size: 6vw;
+  }
+}
+
+@media(max-width:700px){
+  .banner h1.header {
+    padding: 10px 10px;
+    font-size: 8vw;
+  }
+}
+
+.ui.grey.item.stackable.menu {
+  margin: 0px 0px 80px;
+}
