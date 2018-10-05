@@ -29,11 +29,13 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
 
-        <div class="banner">
-          <h1 class="header">Mary&nbsp;Kate Fain</h1>
-        </div>
+        <a href="/">
+          <div class="banner">
+            <h1 class="header">Mary&nbsp;Kate Fain</h1>
+          </div>
+        </a>
 
-        <div class="ui grey three item stackable menu">
+        <div class="ui grey four item stackable menu">
           {% for item in request.site.root_page.get_children.live.in_menu %}
           <a class="item" href="{{ item.url }}">
             {{ item }}

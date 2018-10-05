@@ -7,6 +7,15 @@
   position: relative;
 }
 
+a .banner h1.header{
+  color: black;
+}
+
+a .banner h1.header:hover{
+  color: #9c8cb2;
+  transition: .3s;
+}
+
 @media(min-width:1100px){
   .banner {
     height: 300px;
@@ -73,6 +82,13 @@
   color: #a9a9a9;
 }
 
+.cards a {
+  color: #9c8cb2;
+}
+
+.cards a:hover {
+  color: #a9a9a9;
+}
 
 /* INFO SECTION STYLES */
 
@@ -103,4 +119,12 @@
 
 .image-info.ui.segment .about h2 {
   padding: 10px;
+}
+
+.image-info.ui.segment .about a {
+  color: #9c8cb2;
+}
+
+.image-info.ui.segment .about a:hover {
+  color: #a9a9a9;
 }
