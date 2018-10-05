@@ -1,0 +1,27 @@
+{% load wagtailimages_tags %}
+
+{% for link in self.link %}
+  <a href="{{ link.url }}">
+{% endfor %}
+  <div class="card">
+    <div class="image">
+      {% image self.image fill-300x300 as image %}
+      <img src="{{ image.url }}">
+    </div>
+    <div class="content">
+      <div class="header">{{ self.headline }}</div>
+      <div class="meta">
+        <a>{{ self.subtitle }}</a>
+      </div>
+      <div class="description">
+        {{ self.description }}
+      </div>
+      <div class="extra content">
+        <span>
+          <i class="terminal icon"></i>
+          {{ self.technologies }}
+        </span>
+      </div>
+    </div>
+  </div>
+</a>

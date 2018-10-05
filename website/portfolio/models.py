@@ -8,10 +8,15 @@ from wagtail.core.fields import StreamField
 
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel, MultiFieldPanel
 
-from website.blocks import ImageInfoSection, PortalCard
+from website.blocks import ImageInfoSection, PortfolioCard
 
 
 class PortfolioPage(Page):
+    portfolio_cards = StreamField(
+        [
+            ('portfolio_cards', PortfolioCard())
+        ]
+    )
     body = StreamField(
         [
             ('image_info_section', ImageInfoSection())
@@ -19,5 +24,6 @@ class PortfolioPage(Page):
     )
 
     content_panels = Page.content_panels + [
+        StreamFieldPanel('portfolio_cards'),
         StreamFieldPanel('body'),
     ]

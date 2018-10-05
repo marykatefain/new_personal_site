@@ -24,3 +24,16 @@ class PortalCard(blocks.StructBlock):
     class Meta:
         template = 'website/blocks/portal_card.html'
         icon = 'fa-paragraph'
+
+
+class PortfolioCard(blocks.StructBlock):
+    link = blocks.URLBlock()
+    image = ImageChooserBlock()
+    headline = blocks.CharBlock(required=True)
+    subtitle = blocks.CharBlock(required=False)
+    body = blocks.RichTextBlock(required=False)
+    technologies = blocks.CharBlock(required=False)
+
+    class Meta:
+        template = 'website/blocks/portfolio_card.html'
+        icon = 'fa-paragraph'

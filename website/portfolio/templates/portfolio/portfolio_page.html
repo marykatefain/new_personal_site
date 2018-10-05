@@ -9,26 +9,9 @@
     <h2 class="ui center aligned header">Web Development Portfolio</h2>
 
     <div class="ui link stackable centered cards">
-      <div class="card">
-        <div class="image">
-          <img src="http://placehold.it/600x600">
-        </div>
-        <div class="content">
-          <div class="header">GardenHub</div>
-          <div class="meta">
-            <a>co-creator</a>
-          </div>
-          <div class="description">
-            Specializing in Django based websites.
-          </div>
-        </div>
-        <div class="extra content">
-          <span>
-            <i class="terminal icon"></i>
-            Django, Python
-          </span>
-        </div>
-      </div>
+
+        {% include_block page.portfolio_cards %}
+
     </div>
 
     {% include_block page.body %}
