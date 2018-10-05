@@ -6,15 +6,17 @@
 
 {% block content %}
 <div class="ui container">
+
+  <div class="ui container">
     <h2 class="ui center aligned header">Web Development Portfolio</h2>
-
     <div class="ui link stackable centered cards">
-
         {% include_block page.portfolio_cards %}
-
     </div>
+  </div>
 
+  <div class="ui container">
     {% include_block page.body %}
+  </div>
 
 </div>
 {% endblock %}

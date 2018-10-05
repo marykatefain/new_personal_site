@@ -1,9 +1,9 @@
 {% load wagtailimages_tags %}
 
-{% for link in self.link %}
-  <a href="{{ link.url }}">
-{% endfor %}
   <div class="ui card">
+    {% for link in self.link %}
+      <a href="{{ link.url }}">
+    {% endfor %}
     <div class="ui fluid image">
       {% image self.image fill-300x300 as image %}
       <img src="{{ image.url }}">
@@ -14,7 +14,7 @@
         <a>{{ self.subtitle }}</a>
       </div>
       <div class="ui description">
-        {{ self.description }}
+        {{ self.body }}
       </div>
       <div class="ui extra content">
         <span>
@@ -23,5 +23,6 @@
         </span>
       </div>
     </div>
+  </a>
+
   </div>
-</a>
