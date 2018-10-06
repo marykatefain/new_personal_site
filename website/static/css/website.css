@@ -1,3 +1,12 @@
+body {
+}
+
+.main-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: auto;
+}
+
 .banner {
   background-image: url(/static/images/succulents.jpg);
   background-position: center;
@@ -5,6 +14,7 @@
   background-repeat: no-repeat;
   height: 200px;
   position: relative;
+  max-width: 2000px;
 }
 
 a .banner h1.header{
@@ -54,6 +64,7 @@ a .banner h1.header:hover{
 
 .container {
   margin: 80px auto;
+  max-width: 1000px;
 }
 
 /* CARDS */
@@ -101,11 +112,33 @@ a .banner h1.header:hover{
   color: #a9a9a9;
 }
 
+
+element.style {
+}
+.ui.cards a.card, .ui.link.card, .ui.link.cards .card, a.ui.card {
+    -webkit-transform: none;
+    transform: none;
+}
+.ui.card:last-child {
+    margin-bottom: 0;
+}
+.ui.card:first-child {
+    margin-top: 0;
+}
+.ui.card {
+    margin: 1em 0;
+}
+.ui.card, .block-portfolio_cards .ui.cards>.card {
+  width: 300px;
+}
+
 /* INFO SECTION STYLES */
 
 .image-info.ui.segment{
   display: flex;
   justify-content: space-around;
+  border: none;
+  box-shadow: none;
 }
 
 .image-info .profile-img {
@@ -138,4 +171,20 @@ a .banner h1.header:hover{
 
 .image-info.ui.segment .about a:hover {
   color: #a9a9a9;
+}
+
+/* RESUME */
+
+.template-resumepage .ui.resume.container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+ .resume .primary-content {
+  max-width: 600px;
+}
+
+.resume .sidebar {
+ max-width: 300px;
 }

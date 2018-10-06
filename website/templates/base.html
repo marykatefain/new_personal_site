@@ -44,7 +44,9 @@
 
         </div>
 
-        {% block content %}{% endblock %}
+        <div class="main-content">
+          {% block content %}{% endblock %}
+        </div>
 
         <div class="ui inverted vertical footer segment">
           <div class="ui center aligned container">
@@ -52,25 +54,26 @@
               <div class="five wide column">
                 <h4 class="ui inverted header">Learn More</h4>
                 <div class="ui inverted link list">
-                  <a href="#" class="item">Web Development</a>
-                  <a href="#" class="item">Activism</a>
-                  <a href="#" class="item">Feminist Writing</a>
-                  <a href="#" class="item">CV</a>
+                  {% for item in request.site.root_page.get_children.live.in_menu %}
+                  <a class="item" href="{{ item.url }}">
+                    {{ item }}
+                  </a>
+                  {% endfor %}
                 </div>
               </div>
               <div class="five wide column">
-                <h4 class="ui inverted header">Social Connect</h4>
+                <h4 class="ui inverted header">Stalker Links</h4>
                 <div class="ui inverted link list">
-                  <a href="#" class="item">GitHub</a>
-                  <a href="#" class="item">GitLab</a>
-                  <a href="#" class="item">LinkedIn</a>
+                  <a href="https://github.com/" class="item">GitHub</a>
+                  <a href="https://gitlab.com/marykatefain" class="item">GitLab</a>
+                  <a href="https://www.linkedin.com/in/marykatefain/" class="item">LinkedIn</a>
                 </div>
               </div>
               <div class="five wide column">
                 <h4 class="ui inverted header">Contact</h4>
                 <div class="ui inverted link list">
-                  <a href="#" class="item">Email: mk@marykatefain.com</a>
-                  <a href="#" class="item">IRC: @marykatefain:matrix.org</a>
+                  <a href="mailto:mk@marykatefain.com" class="item">Email: mk@marykatefain.com</a>
+                  <a href="https://riot.im/app/#/room/!dnAsfIIjrbXrcOXIpW:matrix.org" class="item">IRC: @marykatefain:matrix.org</a>
                 </div>
               </div>
             </div>

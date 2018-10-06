@@ -15,11 +15,16 @@ from wagtail.admin.edit_handlers import (
 
 
 class ResumePage(Page):
-    body = StreamField(
-    [
+    body = StreamField([
+        ('content', blocks.RichTextBlock()),
+    ], null=True, blank=True)
+
+    sidebar = StreamField([
         ('content', blocks.RichTextBlock()),
     ], null=True, blank=True)
 
     content_panels = Page.content_panels + [
         StreamFieldPanel('body'),
+        StreamFieldPanel('sidebar'),
+
     ]

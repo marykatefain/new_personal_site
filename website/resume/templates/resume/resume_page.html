@@ -5,11 +5,16 @@
 {% block body_class %}template-resumepage{% endblock %}
 
 {% block content %}
-<div class="ui container">
+<h2 class="ui header">{{ self.title }}</h2>
 
-  <div class="ui container">
-    {% include_block page.body %}
-  </div>
+<div class="ui resume container">
+
+    <div class="resume primary-content">
+      {% include_block page.body %}
+    </div>
+    <div class="resume sidebar">
+      {% include_block page.sidebar %}
+    </div>
 
 </div>
 {% endblock %}
