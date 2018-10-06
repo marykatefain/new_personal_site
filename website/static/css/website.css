@@ -188,3 +188,10 @@ element.style {
 .resume .sidebar {
  max-width: 300px;
 }
+
+/* FOOTER */
+
+.footer.segment .footer.container {
+  max-width: 1000px;
+  margin: 20px auto;
+}
