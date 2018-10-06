@@ -1,10 +1,15 @@
 body {
+  font-family: 'Scope One', serif;
 }
 
 .main-content {
   max-width: 1000px;
   margin: 0 auto;
   height: auto;
+}
+
+.main-content .ui.header {
+  font-family: 'Karla', sans-serif;
 }
 
 .banner {
@@ -18,11 +23,12 @@ body {
 }
 
 a .banner h1.header{
-  color: black;
+  color: #9c8cb2;
+  font-family: 'Muli', sans-serif;
 }
 
 a .banner h1.header:hover{
-  color: #9c8cb2;
+  color: #a9a9a9;
   transition: .3s;
 }
 
@@ -34,20 +40,20 @@ a .banner h1.header:hover{
 
 .banner h1.header {
   position: absolute;
-  bottom: 0px;
-  padding: 10px 40px;
-  font-size: 4vw;
+  top: 0px;
+  padding: 40px 40px;
+  font-size: 3vw;
 }
 
 @media(max-width:1100px){
   .banner h1.header {
-    font-size: 4.5vw;
+    font-size: 3vw;
   }
 }
 
 @media(max-width:900px){
   .banner h1.header {
-    font-size: 6vw;
+    font-size: 3vw;
   }
 }
 
@@ -60,6 +66,8 @@ a .banner h1.header:hover{
 
 .ui.grey.item.stackable.menu {
   margin: 0px 0px 80px;
+  font-family: 'Scope One', serif;
+  font-size: 18px;
 }
 
 .container {
@@ -74,10 +82,19 @@ a .banner h1.header:hover{
   justify-content: space-around;
 }
 
+.block-portal_card .ui.header {
+  font-family: 'Karla', sans-serif;
+}
+
+.block-portfolio_cards .ui.header {
+  font-family: 'Karla', sans-serif;
+}
+
 .block-portal_card {
   margin: 30px auto;
   display: flex;
   justify-content: space-around;
+  font-family: 'Scope One', serif;
 }
 
 .block-portfolio_cards {
@@ -92,6 +109,7 @@ a .banner h1.header:hover{
 
 .block-portfolio_cards .card .description {
   margin-bottom: 30px;
+  font-family: 'Scope One', serif;
 }
 
 .block-portfolio_cards .card .extra.content {
@@ -144,6 +162,9 @@ element.style {
 .image-info .profile-img {
   display: flex;
   align-items: center;
+  align-self: flex-end;
+  padding: 10px;
+  padding-bottom: 0px;
 }
 
 @media(max-width:770px) {
@@ -159,10 +180,13 @@ element.style {
 
 .image-info.ui.segment .about p {
   padding: 5px;
+  font-size: 18px;
+  font-family: 'Scope One', serif;
 }
 
 .image-info.ui.segment .about h2 {
   padding: 10px;
+  font-family: 'Karla', sans-serif;
 }
 
 .image-info.ui.segment .about a {
@@ -179,6 +203,7 @@ element.style {
   margin: 20px auto;
   padding: 20px;
   text-align: center;
+  font-family: 'Scope One', serif;
 }
 
 .sub.header::after {
@@ -195,6 +220,7 @@ element.style {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+  font-size: 14px;
 }
 
 @media(max-width:900px) {
@@ -207,6 +233,14 @@ element.style {
   .template-resumepage .ui.header {
     text-align: center;
   }
+}
+
+.template-resumepage .resume li {
+  margin: 10px auto;
+}
+
+.template-resumepage .ui.header {
+  font-family: 'Karla', sans-serif;
 }
 
  .resume .primary-content {
@@ -250,4 +284,5 @@ element.style {
 .footer.segment .footer.container {
   max-width: 1000px;
   margin: 20px auto;
+  font-family: 'Scope One', serif;
 }
