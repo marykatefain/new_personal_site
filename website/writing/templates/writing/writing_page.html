@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+
+{% block body_class %}template-resumepage{% endblock %}
+
+{% block content %}
+<h2 class="ui header">{{ self.title }}</h2>
+
+<div class="ui resume container">
+
+    <div class="resume primary-content">
+      {% include_block page.body %}
+    </div>
+    <div class="resume sidebar">
+      {% include_block page.sidebar %}
+    </div>
+
+</div>
+{% endblock %}
