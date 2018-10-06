@@ -12,6 +12,8 @@ from website.blocks import ImageInfoSection, PortfolioCard
 
 
 class PortfolioPage(Page):
+    headline = models.CharField(max_length=255)
+    subtitle = models.CharField(max_length=255, blank=True, null=True)
     portfolio_cards = StreamField(
         [
             ('portfolio_cards', PortfolioCard())
@@ -24,6 +26,8 @@ class PortfolioPage(Page):
     )
 
     content_panels = Page.content_panels + [
+        FieldPanel('headline'),
+        FieldPanel('subtitle'),
         StreamFieldPanel('portfolio_cards'),
         StreamFieldPanel('body'),
     ]

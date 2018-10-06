@@ -173,6 +173,22 @@ element.style {
   color: #a9a9a9;
 }
 
+/* PORTFOLIO PAGES */
+
+.sub.header {
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.sub.header::after {
+  margin: 40px auto;
+  content: "";
+  display: block;
+  width: 100px;
+  border-top: 1px solid #a9a9a9;
+}
+
 /* RESUME */
 
 .template-resumepage .ui.resume.container {

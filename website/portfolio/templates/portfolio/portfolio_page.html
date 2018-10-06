@@ -8,7 +8,8 @@
 <div class="ui container">
 
   <div class="ui container">
-    <h2 class="ui center aligned header">Web Development Portfolio</h2>
+    <h2 class="ui center aligned header">{{ self.headline }}</h2>
+    <div class="centered sub header">{{ self.subtitle }}</div>
     <div class="ui link stackable centered cards">
         {% include_block page.portfolio_cards %}
     </div>
