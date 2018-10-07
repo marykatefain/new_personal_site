@@ -1,1 +1,1 @@
-web: uwsgi --http :$PORT --module <marykatefain.com>.wsgi --master --offload-threads 1
+web: uwsgi --http :$PORT --module website.wsgi --master --offload-threads 1
