@@ -1,5 +1,4 @@
 ansible==2.7.0
-arandr==latest
 backports.ssl-match-hostname==3.4.0.2
 beautifulsoup4==4.6.0
 cached-property==1.3.0
