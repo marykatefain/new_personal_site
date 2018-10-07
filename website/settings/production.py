@@ -1,5 +1,7 @@
 from .base import *
 
+env = os.environ.copy()
+
 DEBUG = False
 
 try:
@@ -7,4 +9,10 @@ try:
 except ImportError:
     pass
 
-ALLOWED_HOSTS = ['*']
+if 'SECRET_KEY' in env:
+    SECRET_KEY = env['SECRET_KEY']
+
+if 'ALLOWED_HOSTS' in env:
+    ALLOWED_HOSTS = env['ALLOWED_HOSTS'].split(',')
+else:
+    ALLOWED_HOSTS = ['*']
