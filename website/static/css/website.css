@@ -75,6 +75,14 @@ a .banner h1.header:hover{
   max-width: 1000px;
 }
 
+.ui.center.aligned.header.main::after {
+  content: "";
+  margin: 40px auto;
+  display: block;
+  width: 100px;
+  border-top: 1px solid #a9a9a9;
+}
+
 /* CARDS */
 
 .ui.cards {
@@ -85,6 +93,7 @@ a .banner h1.header:hover{
 .block-portal_card .ui.header {
   font-family: 'Karla', sans-serif;
 }
+
 
 .block-portfolio_cards .ui.header {
   font-family: 'Karla', sans-serif;
