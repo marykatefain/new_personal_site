@@ -6,3 +6,5 @@ try:
     from .local import *
 except ImportError:
     pass
+
+ALLOWED_HOSTS = ['*']
