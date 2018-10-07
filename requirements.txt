@@ -22,7 +22,7 @@ ecdsa==0.13
 Fabric==1.10.2
 flake8==3.5.0
 funcsigs==0.4
-functools32==3.2.3.post2
+
 html5lib==0.999
 httplib2==0.9.1
 idna==2.7
