@@ -1,1 +1,2 @@
 wagtail==2.2.2
+uwsgi==latest
