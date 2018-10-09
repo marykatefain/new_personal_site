@@ -1,2 +1,3 @@
 wagtail==2.2.2
+whitenoise==4.1
 uwsgi==2.0.17
