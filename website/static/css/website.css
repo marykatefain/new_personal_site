@@ -106,6 +106,23 @@ a .banner h1.header:hover{
   font-family: 'Scope One', serif;
 }
 
+
+.block-portal_card p {
+  color: #a9a9a9;
+}
+
+.block-portal_card a {
+  color: #a9a9a9;
+}
+
+.block-portfolio_cards p {
+  color: #a9a9a9;
+}
+
+.block-portfolio_cards a {
+  color: #a9a9a9;
+}
+
 .block-portfolio_cards {
   margin: 30px auto;
   display: flex;
@@ -131,14 +148,9 @@ a .banner h1.header:hover{
   width: 90%;
 }
 
-.cards a {
-  color: #9c8cb2;
-}
-
 .cards a:hover {
   color: #a9a9a9;
 }
-
 
 element.style {
 }
@@ -155,6 +167,12 @@ element.style {
 .ui.card {
     margin: 1em 0;
 }
+
+.ui.card .subtitle {
+    margin: 0px auto 10px auto;
+    font-family: Lato;
+}
+
 .ui.card, .block-portfolio_cards .ui.cards>.card {
   width: 300px;
 }
@@ -294,4 +312,8 @@ element.style {
   max-width: 1000px;
   margin: 20px auto;
   font-family: 'Scope One', serif;
+}
+
+.footer a {
+  color: #9c8cb2;
 }

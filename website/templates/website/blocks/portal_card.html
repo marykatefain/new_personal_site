@@ -2,20 +2,22 @@
 
   <div class="ui card">
     {% for link in self.link %}
-      <a href="{{ link.url }}">
-    {% endfor %}
+    <a href="{{ link.url }}">
       <div class="ui fluid image">
         {% image self.image fill-300x300 as image %}
         <img src="{{ image.url }}">
       </div>
-      <div class="ui content">
-        <div class="ui header">{{ self.headline }}</div>
-        <div class="ui meta">
-          <a>{{ self.subtitle }}</a>
+        <div class="ui content">
+          <a href="{{ link.url }}">
+            <div class="ui header">{{ self.headline }}</div>
+            <div class="subtitle">
+              {{ self.subtitle }}
+            </div>
+            <div class="ui description">
+              {{ self.body }}
+            </div>
+          </a>
         </div>
-        <div class="ui description">
-          {{ self.body }}
-        </div>
-      </div>
     </a>
+    {% endfor %}
   </div>
