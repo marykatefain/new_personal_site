@@ -13,7 +13,7 @@ body {
 }
 
 .banner {
-  background-image: url(/static/images/succulents.jpg);
+  background-image: url(../images/succulents.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
