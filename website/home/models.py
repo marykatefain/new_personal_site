@@ -12,6 +12,7 @@ from website.blocks import ImageInfoSection, PortalCard
 
 
 class HomePage(Page):
+    subtitle = models.CharField(max_length=255, blank=True, null=True)
     portal_cards = StreamField(
         [
             ('portal_card', PortalCard())
@@ -24,6 +25,7 @@ class HomePage(Page):
     )
 
     content_panels = Page.content_panels + [
+        FieldPanel('subtitle'),
         StreamFieldPanel('portal_cards'),
         StreamFieldPanel('body'),
     ]
