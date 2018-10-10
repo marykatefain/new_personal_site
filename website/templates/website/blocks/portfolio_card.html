@@ -11,15 +11,17 @@
         <div class="ui meta">
           <a>{{ self.subtitle }}</a>
         </div>
-        <div class="ui description">
-          {{ self.body }}
-        </div>
-        <div class="ui extra content">
-          <span>
-            <i class="terminal icon"></i>
-            {{ self.technologies }}
-          </span>
-        </div>
+        <a href="{{ self.link }}" target="_blank">
+          <div class="ui description">
+            {{ self.body }}
+          </div>
+          <div class="ui extra content">
+            <span>
+              <i class="terminal icon"></i>
+              {{ self.technologies }}
+            </span>
+          </div>
+        </a>
       </div>
     </a>
   </div>

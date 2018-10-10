@@ -106,7 +106,6 @@ a .banner h1.header:hover{
   font-family: 'Scope One', serif;
 }
 
-
 .block-portal_card p {
   color: #a9a9a9;
 }
@@ -131,10 +130,12 @@ a .banner h1.header:hover{
 
 .block-portfolio_cards .card .content {
   position: relative;
+
 }
 
 .block-portfolio_cards .card .description {
   margin-bottom: 30px;
+  padding: 10px 0;
   font-family: 'Scope One', serif;
 }
 
