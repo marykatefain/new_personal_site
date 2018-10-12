@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
 
 
 {% block body_class %}template-blogindex{% endblock %}
@@ -9,7 +10,12 @@
 
 <div class="ui blog container">
   {% for post in blog_pages %}
-    Blog Post
+    {% image post.listing_image fill-400x200 as image %}
+    <img src="{{ image.url }}">
+    <h2>{{ post.headline }}</h2>
+    <h3>{{ post.subtitle }}</h3>
+    <p>{{ post.first_published_at }}</p>
+    <p>{{ post.body | safe }}</p>
   {% endfor %}
 </div>
 {% endblock %}

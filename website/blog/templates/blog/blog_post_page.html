@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+
+{% block body_class %}template-blogself{% endblock %}
+
+{% block content %}
+<h2 class="ui header">{{ self.title }}</h2>
+
+<div class="ui blog container">
+  {% image self.listing_image fill-400x200 as image %}
+  <img src="{{ image.url }}">
+  <h2>{{ self.headline }}</h2>
+  <h3>{{ self.subtitle }}</h3>
+  <p>{{ self.first_published_at }}</p>
+  <p>{{ self.body | safe }}</p>
+</div>
+{% endblock %}
