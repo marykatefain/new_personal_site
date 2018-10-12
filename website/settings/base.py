@@ -25,12 +25,15 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
+    'wagalytics',
+    'wagtailfontawesome',
     'search',
     'website',
     'website.home',
     'website.portfolio',
     'website.resume',
     'website.writing',
+    'website.blog',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -161,4 +164,6 @@ WAGTAIL_SITE_NAME = "website"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://example.com'
+BASE_URL = 'http://marykatefain.com'
+
+GA_VIEW_ID="UA-62506265-1"

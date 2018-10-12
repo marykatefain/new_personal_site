@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+
+{% block body_class %}template-blogindex{% endblock %}
+
+{% block content %}
+<h2 class="ui header">{{ self.title }}</h2>
+
+<div class="ui blog container">
+  {% for post in blog_pages %}
+    Blog Post
+  {% endfor %}
+</div>
+{% endblock %}
