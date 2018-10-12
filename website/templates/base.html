@@ -118,6 +118,16 @@
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/website.js' %}"></script>
 
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-62506265-1');
+        </script>
+
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
         {% endblock %}
