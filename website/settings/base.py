@@ -168,12 +168,10 @@ WAGTAIL_SITE_NAME = "website"
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://marykatefain.com'
 
-
-if 'GA_VIEW_ID' in env:
+if 'GA_KEY_CONTENT' in env and 'GA_VIEW_ID' in env:
+    GA_KEY_CONTENT = env['GA_KEY_CONTENT']
     GA_VIEW_ID = env['GA_VIEW_ID']
 
-if 'GA_KEY_CONTENT' in env:
-    GA_KEY_CONTENT = env['GA_KEY_CONTENT']
 
 LOGGING = {
     'version': 1,
