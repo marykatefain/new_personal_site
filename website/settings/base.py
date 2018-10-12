@@ -169,3 +169,20 @@ BASE_URL = 'http://marykatefain.com'
 GA_VIEW_ID = 'ga:101750507'
 
 GA_TRACKING_ID = 'UA-62506265-1'
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'ERROR'),
+        },
+    },
+}
