@@ -16,6 +16,8 @@ import os
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
+env = os.environ.copy
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -166,10 +168,12 @@ WAGTAIL_SITE_NAME = "website"
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://marykatefain.com'
 
-GA_VIEW_ID = 'ga:101750507'
 
-GA_TRACKING_ID = 'UA-62506265-1'
+if 'GA_VIEW_ID' in env:
+    GA_VIEW_ID = env['GA_VIEW_ID']
 
+if 'GA_KEY_CONTENT' in env:
+    GA_KEY_CONTENT = env['GA_KEY_CONTENT']
 
 LOGGING = {
     'version': 1,
