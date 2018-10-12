@@ -166,4 +166,4 @@ WAGTAIL_SITE_NAME = "website"
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://marykatefain.com'
 
-GA_VIEW_ID="UA-62506265-1"
+GA_VIEW_ID="62506265-1"
