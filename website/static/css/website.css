@@ -307,6 +307,31 @@ element.style {
   }
 }
 
+/* blog */
+
+.blog .post-index {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  height: 200px;
+  margin: 80px auto;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.blog .post-index .preview.image {
+  margin-right: 40px;
+}
+
+.blog .post-index .preview.content a {
+  color: #9c8cb2;
+}
+
+.blog .post-index .preview.content a:hover {
+  color: #a9a9a9;
+}
+
+
 /* FOOTER */
 
 .footer.segment .footer.container {
