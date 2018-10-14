@@ -313,14 +313,52 @@ element.style {
   display: flex;
   justify-content: space-around;
   max-width: 1000px;
-  height: 200px;
+  height: 220px;
   margin: 80px auto;
+  padding: 10px;
   font-size: 16px;
   overflow: hidden;
 }
 
+@media(max-width:1000px) {
+  .blog .post-index {
+    flex-direction: column;
+    height: auto;
+    max-width: 600px;
+  }
+}
+
 .blog .post-index .preview.image {
   margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media(max-width:1000px) {
+  .blog .post-index .preview.image {
+    margin-right: 0px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+  }
+}
+
+.blog .post-index .preview.image img {
+  border-radius: 5px;
+  width: 300px;
+  height: 200px;
+}
+
+@media(max-width:1000px) {
+  .blog .post-index .preview.image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.blog .post-index .preview.image img:hover {
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 .blog .post-index .preview.content a {
