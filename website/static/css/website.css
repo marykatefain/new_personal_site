@@ -97,6 +97,11 @@ a .banner h1.header:hover{
 
 .block-portfolio_cards .ui.header {
   font-family: 'Karla', sans-serif;
+  margin-bottom: 5px;
+}
+
+.block-portfolio_cards .meta {
+  margin-top: 5px;
 }
 
 .block-portal_card {
