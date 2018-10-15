@@ -1,4 +1,5 @@
 {% load static wagtailuserbar %}
+{% load website_tags %}
 
 <!DOCTYPE html>
 <html class="no-js">
@@ -118,6 +119,9 @@
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/website.js' %}"></script>
 
+
+        {% get_setting "ANALYTICS_ENABLED" as analytics_enabled %}
+        {% if not request.is_preview and analytics_enabled %}
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62506265-1"></script>
         <script>
@@ -127,6 +131,8 @@
 
           gtag('config', 'UA-62506265-1');
         </script>
+        {% endif %}
+
 
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
