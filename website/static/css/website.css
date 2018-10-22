@@ -380,6 +380,10 @@ element.style {
   font-size: 16px;
 }
 
+.blogpost img {
+  max-width: 800px;
+}
+
 
 /* FOOTER */
 
