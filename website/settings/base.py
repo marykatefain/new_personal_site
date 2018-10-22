@@ -174,6 +174,9 @@ if 'ANALYTICS_ENABLED' in env:
 if 'GA_KEY_CONTENT' in env and 'GA_VIEW_ID' in env:
     GA_KEY_CONTENT = env['GA_KEY_CONTENT']
     GA_VIEW_ID = env['GA_VIEW_ID']
+else:
+    GA_KEY_CONTENT = '00000'
+    GA_VIEW_ID = '00000'
 
 
 LOGGING = {
