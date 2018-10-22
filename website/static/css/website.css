@@ -374,6 +374,12 @@ element.style {
   color: #a9a9a9;
 }
 
+.blogpost {
+  max-width: 800px;
+  margin: 0px auto;
+  font-size: 16px;
+}
+
 
 /* FOOTER */
 

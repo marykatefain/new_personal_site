@@ -3,17 +3,19 @@
 {% load wagtailimages_tags %}
 
 
-{% block body_class %}template-blogself{% endblock %}
+{% block body_class %}template-blogpost{% endblock %}
 
 {% block content %}
 {# <h2 class="ui header">{{ self.title }}</h2> #}
 
 <div class="ui blog container">
-  {% image self.listing_image fill-1000x600 as image %}
-  <img src="{{ image.url }}">
-  <h2>{{ self.headline }}</h2>
-  <h3>{{ self.subtitle }}</h3>
-  <p>{{ self.first_published_at }}</p>
-  <p>{{ self.body | safe }}</p>
+  <div class="blogpost">
+    {% image self.listing_image fill-1000x600 as image %}
+    <img src="{{ image.url }}">
+    <h2>{{ self.headline }}</h2>
+    <h3>{{ self.subtitle }}</h3>
+    <p>{{ self.first_published_at }}</p>
+    <p>{{ self.body | safe }}</p>
+  </div>
 </div>
 {% endblock %}
