@@ -15,7 +15,7 @@
     <h2>{{ self.headline }}</h2>
     <h3>{{ self.subtitle }}</h3>
     <p>{{ self.first_published_at }}</p>
-    <p>{{ self.body | safe }}</p>
+    <p>{{ self.body | richtext }}</p>
   </div>
 </div>
 {% endblock %}
