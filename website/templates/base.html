@@ -6,9 +6,10 @@
     <head>
 
         <meta charset="utf-8" />
+
         <title>
             {% block title %}
-                {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+                {{ self.title }}
             {% endblock %}
             {% block title_suffix %}
                 {% with self.get_site.site_name as site_name %}
@@ -16,18 +17,40 @@
                 {% endwith %}
             {% endblock %}
         </title>
-        <meta name="description" content="M. K. Fain is a web developer, activist, and feminist writer in Philadelphia." />
+
+        {% if self.search_desciption %}
+          <meta name="description" content="{{ self.search_desciption }}"/>
+        {% else %}
+          <meta name="description" content="M. K. Fain is a web developer, activist, and feminist writer in Philadelphia." />
+        {% endif %}
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta property="og:title" content="Mary Kate Fain">
+        {% with self.get_site.site_name as site_name %}
+          <meta property="og:title" content="{{ self.title }} {% if site_name %}- {{ site_name }}{% endif %}">
+        {% endwith %}
+
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://marykatefain.com">
-        <meta property="og:image" content="/static/images/icon.png">
-        <meta property="og:image:type" content="image/png">
-        <meta property="og:image:width" content="300">
-        <meta property="og:image:height" content="300">
-        <meta property="og:image:alt" content="M. K. Fain logo">
-        <meta property="og:description" content="M. K. is a web developer, activist, and feminist writer in Philadelphia">
+
+        {% if self.listing_image %}
+          {% image self.listing_image fill-600x400 as image %}
+          <meta property="og:image" content="{{ image.url }}">
+          <meta property="og:image:alt" content="{{ image.alt }}">
+        {% else %}
+          <meta property="og:image" content="/static/images/icon.png">
+          <meta property="og:image:alt" content="Mary Kate Fain">
+        {% endif %}
+
+        <meta property="og:image:type" content="image">
+        <meta property="og:image:width" content="auto">
+        <meta property="og:image:height" content="auto">
+
+        {% if self.search_desciption %}
+          <meta property="og:description" content="{{ self.search_desciption }}"/>
+        {% else %}
+          <meta property="og:description" content="M. K. is a web developer, activist, and feminist writer in Philadelphia">
+        {% endif %}
 
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/website.css' %}">
