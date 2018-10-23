@@ -384,6 +384,12 @@ element.style {
   max-width: 800px;
 }
 
+@media(max-width:800px) {
+  .blogpost img {
+    max-width: 90%;
+  }
+}
+
 
 /* FOOTER */
 
