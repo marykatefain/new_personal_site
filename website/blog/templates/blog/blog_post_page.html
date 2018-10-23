@@ -2,6 +2,15 @@
 {% load wagtailcore_tags %}
 {% load wagtailimages_tags %}
 
+<meta property="og:title" content="{{ self.title }}">
+<meta property="og:type" content="website">
+{% image self.listing_image fill-1000x600 as image %}
+<meta property="og:image" content="{{ image.url }}">
+<meta property="og:image:type" content="image">
+<meta property="og:image:width" content="auto">
+<meta property="og:image:height" content="300">
+<meta property="og:image:alt" content="">
+<meta property="og:description" content="{{ self.headline }}">
 
 {% block body_class %}template-blogpost{% endblock %}
 
