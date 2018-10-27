@@ -74,6 +74,13 @@ MIDDLEWARE = [
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
+
+# Taggit
+# https://django-taggit.readthedocs.io/en/latest/
+
+# TAGGIT_CASE_INSENSITIVE = True
+
+
 ROOT_URLCONF = 'website.urls'
 
 TEMPLATES = [

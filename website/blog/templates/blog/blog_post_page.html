@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags static %}
 {% load wagtailimages_tags %}
 
 {% block body_class %}template-blogpost{% endblock %}
@@ -15,6 +15,11 @@
     {% if self.subtitle %}
       <h3>{{ self.subtitle }}</h3>
     {% endif %}
+    {# {% if page.tags.all.count %}
+      {% for tag in page.tags.all %}
+        <span>{{ tag }}</span>
+      {% endfor %}
+    {% endif %} #}
     <p>{{ self.first_published_at }}</p>
     <p>{{ self.body | richtext }}</p>
   </div>

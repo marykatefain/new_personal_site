@@ -15,6 +15,17 @@ from wagtail.admin.edit_handlers import (
     PageChooserPanel,
     StreamFieldPanel
 )
+from modelcluster.fields import ParentalKey
+from modelcluster.contrib.taggit import ClusterTaggableManager
+from taggit.models import Tag, TaggedItemBase
+
+
+class BlogPageTag(TaggedItemBase):
+    content_object = ParentalKey(
+        'BlogPostPage',
+        related_name='tagged_items',
+        on_delete=models.CASCADE
+    )
 
 
 class BlogIndexPage(Page):
@@ -38,12 +49,14 @@ class BlogPostPage(Page):
         on_delete=models.SET_NULL,
         related_name='+'
     )
+    tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
 
     content_panels = Page.content_panels + [
         FieldPanel('headline'),
         FieldPanel('subtitle'),
         FieldPanel('body'),
         ImageChooserPanel('listing_image'),
+        FieldPanel('tags'),
     ]
 
     parent_page_types = ['BlogIndexPage']
