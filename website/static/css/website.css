@@ -386,7 +386,51 @@ element.style {
 
 @media(max-width:800px) {
   .blogpost img {
-    max-width: 90%;
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+
+.blogpost .rich-text img.left {
+  max-width: 300px;
+  height: auto;
+  float:left;
+  padding: 20px;
+  margin-left: -80px;
+}
+
+.blogpost .rich-text img.right {
+  max-width: 300px;
+  height: auto;
+  float:right;
+  padding: 20px;
+  margin-right: -80px;
+}
+
+@media(max-width:800px) {
+  .blogpost .rich-text img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media(max-width:800px) {
+  .blogpost .rich-text img.left {
+    max-width: 100%;
+    height: auto;
+    float:none;
+    padding: 20px;
+    margin-left: 0px;
+  }
+}
+
+@media(max-width:800px) {
+  .blogpost .rich-text img.right {
+    max-width: 100%;
+    height: auto;
+    float:none;
+    padding: 20px;
+    margin-right: 0px;
   }
 }
 
