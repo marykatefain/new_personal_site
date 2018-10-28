@@ -15,13 +15,14 @@
     {% if self.subtitle %}
       <h3>{{ self.subtitle }}</h3>
     {% endif %}
-    {# {% if page.tags.all.count %}
-      {% for tag in page.tags.all %}
-        <span>{{ tag }}</span>
-      {% endfor %}
-    {% endif %} #}
     <p>{{ self.first_published_at }}</p>
     <p>{{ self.body | richtext }}</p>
   </div>
 </div>
 {% endblock %}
+
+{% if page.tags.all.count %}
+  {% for tag in page.tags.all %}
+    <span>{{ tag }}</span>
+  {% endfor %}
+{% endif %}
