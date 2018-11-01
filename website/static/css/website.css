@@ -446,3 +446,15 @@ element.style {
 footer .ui.footer .ui.inverted.link.list .item, .ui.inverted.link.list a.item {
   color: #d2c9de;
 }
+
+footer .ui.footer .ui.inverted.link.list .item:hover, .ui.inverted.link.list a.item {
+  color: white;
+}
+
+footer a {
+  color: #d2c9de;
+}
+
+footer a:hover {
+  color: white;
+}
