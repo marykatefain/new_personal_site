@@ -38,7 +38,7 @@
 
         {% if self.listing_image %}
           {% image self.listing_image fill-600x400 as image %}
-          <meta property="og:image" content="{{ image.url }}">
+          <meta property="og:image" content="{{ image.url }}" alt="{{ image.alt }}">
           <meta property="og:image:alt" content="{{ image.alt }}">
         {% else %}
           <meta property="og:image" content="/static/images/icon.png">
@@ -87,26 +87,29 @@
 
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
-
-        <a href="/">
-          <div class="banner">
-            <h1 class="header">M. K. Fain</h1>
-          </div>
-        </a>
-
-        <div class="ui grey four item stackable menu">
-          {% for item in request.site.root_page.get_children.live.in_menu %}
-          <a class="item" href="{{ item.url }}">
-            {{ item }}
+        <header>
+          <a href="/">
+            <div class="banner">
+              <h1 class="header">M. K. Fain</h1>
+            </div>
           </a>
-          {% endfor %}
 
-        </div>
+          <nav>
+            <div class="ui grey four item stackable menu">
+              {% for item in request.site.root_page.get_children.live.in_menu %}
+              <a class="item" href="{{ item.url }}">
+                {{ item }}
+              </a>
+              {% endfor %}
+            </div>
+          </nav>
+        </header>
 
         <div class="main-content">
           {% block content %}{% endblock %}
         </div>
 
+        <footer>
         <div class="ui inverted vertical footer segment">
           <div class="ui center aligned footer container">
             <div class="ui stackable inverted divided grid">
@@ -138,9 +141,9 @@
             </div>
             <div class="ui inverted section divider"></div>
             <p>Sharing is caring. Licensed under the AGPL 3.0. Source available on <a href="https://github.com/marykatefain/new_personal_site" target="_blank">GitHub</a>.</p>
-            </div>
           </div>
         </div>
+        </footer>
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/website.js' %}"></script>

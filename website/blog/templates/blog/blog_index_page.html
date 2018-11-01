@@ -14,7 +14,7 @@
     <div class="preview image">
       {% image post.listing_image fill-600x400 as image %}
       <a href="{{ post.url }}">
-        <img src="{{ image.url }}">
+        <img src="{{ image.url }}" alt="{{ image.alt }}">
       </a>
     </div>
     <div class="preview content">

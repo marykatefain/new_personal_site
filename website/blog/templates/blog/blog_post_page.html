@@ -10,7 +10,7 @@
 <div class="ui blog container">
   <div class="blogpost">
     {% image self.listing_image fill-1000x600 as image %}
-    <img src="{{ image.url }}">
+    <img src="{{ image.url }}" alt="{{ image.alt }}">
     <h2>{{ self.headline }}</h2>
     {% if self.subtitle %}
       <h3>{{ self.subtitle }}</h3>

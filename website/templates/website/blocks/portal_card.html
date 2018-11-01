@@ -5,7 +5,7 @@
     <a href="{{ link.url }}">
       <div class="ui fluid image">
         {% image self.image fill-300x300 as image %}
-        <img src="{{ image.url }}">
+        <img src="{{ image.url }}" alt="{{ image.alt }}">
       </div>
         <div class="ui content">
           <a href="{{ link.url }}">
