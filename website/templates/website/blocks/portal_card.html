@@ -2,13 +2,13 @@
 
   <div class="ui card">
     {% for link in self.link %}
-    <a href="{{ link.url }}">
+    <a href="{{ link.url }}" aria-label="{{ link.title }}">
       <div class="ui fluid image">
         {% image self.image fill-300x300 as image %}
         <img src="{{ image.url }}" alt="{{ image.alt }}">
       </div>
         <div class="ui content">
-          <a href="{{ link.url }}">
+          <a href="{{ link.url }}" aria-label="{{ link.title }}">
             <div class="ui header">{{ self.headline }}</div>
             <div class="subtitle">
               {{ self.subtitle }}

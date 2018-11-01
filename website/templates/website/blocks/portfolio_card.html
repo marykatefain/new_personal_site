@@ -1,7 +1,7 @@
 {% load wagtailimages_tags %}
 
   <div class="ui card">
-    <a href="{{ self.link }}" target="_blank">
+    <a href="{{ self.link }}" "{{ self.link }}" aria-label="{{ self.headline }}, {{ self.subtitle }}," target="_blank">
       <div class="ui fluid image">
         {% image self.image fill-300x300 as image %}
         <img src="{{ image.url }}" alt="{{ image.alt }}">
@@ -11,7 +11,7 @@
         <div class="ui meta">
           {{ self.subtitle }}
         </div>
-        <a href="{{ self.link }}" target="_blank">
+        <a href="{{ self.link }}" "{{ self.link }}" aria-label="{{ self.headline }}, {{ self.subtitle }}" target="_blank">
           <div class="ui description">
             {{ self.body }}
           </div>
