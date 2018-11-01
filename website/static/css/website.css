@@ -23,12 +23,12 @@ body {
 }
 
 a .banner h1.header{
-  color: #9c8cb2;
+  color: #716482;
   font-family: 'Muli', sans-serif;
 }
 
 a .banner h1.header:hover{
-  color: #a9a9a9;
+  color: #6b6b6b;
   transition: .3s;
 }
 
@@ -80,7 +80,7 @@ a .banner h1.header:hover{
   margin: 40px auto;
   display: block;
   width: 100px;
-  border-top: 1px solid #a9a9a9;
+  border-top: 1px solid #6b6b6b;
 }
 
 /* CARDS */
@@ -112,19 +112,19 @@ a .banner h1.header:hover{
 }
 
 .block-portal_card p {
-  color: #a9a9a9;
+  color: #6b6b6b;
 }
 
 .block-portal_card a {
-  color: #a9a9a9;
+  color: #6b6b6b;
 }
 
 .block-portfolio_cards p {
-  color: #a9a9a9;
+  color: #6b6b6b;
 }
 
 .block-portfolio_cards a {
-  color: #a9a9a9;
+  color: #6b6b6b;
 }
 
 .block-portfolio_cards {
@@ -145,17 +145,17 @@ a .banner h1.header:hover{
 }
 
 .block-portfolio_cards .card .extra.content {
-  border-top: 1px solid #a9a9a9;
+  border-top: 1px solid #6b6b6b;
   margin: 10px auto;
   padding-top: 5px;
-  color: #a9a9a9;
+  color: #6b6b6b;
   position: absolute;
   bottom: 0px;
   width: 90%;
 }
 
 .cards a:hover {
-  color: #a9a9a9;
+  color: #6b6b6b;
 }
 
 element.style {
@@ -223,11 +223,11 @@ element.style {
 }
 
 .image-info.ui.segment .about a {
-  color: #9c8cb2;
+  color: #716482;
 }
 
 .image-info.ui.segment .about a:hover {
-  color: #a9a9a9;
+  color: #6b6b6b;
 }
 
 /* PORTFOLIO PAGES */
@@ -244,7 +244,7 @@ element.style {
   content: "";
   display: block;
   width: 100px;
-  border-top: 1px solid #a9a9a9;
+  border-top: 1px solid #6b6b6b;
 }
 
 /* RESUME */
@@ -308,7 +308,7 @@ element.style {
     content: "";
     display: block;
     width: 100px;
-    border-top: 1px solid #a9a9a9;
+    border-top: 1px solid #6b6b6b;
   }
 }
 
@@ -367,11 +367,11 @@ element.style {
 }
 
 .blog .post-index .preview.content a {
-  color: #9c8cb2;
+  color: #716482;
 }
 
 .blog .post-index .preview.content a:hover {
-  color: #a9a9a9;
+  color: #6b6b6b;
 }
 
 .blogpost {
@@ -443,6 +443,6 @@ element.style {
   font-family: 'Scope One', serif;
 }
 
-.footer a {
-  color: #9c8cb2;
+footer .ui.footer .ui.inverted.link.list .item, .ui.inverted.link.list a.item {
+  color: #d2c9de;
 }
