@@ -377,7 +377,7 @@ element.style {
 .blogpost {
   max-width: 800px;
   margin: 0px auto;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .blogpost img {
@@ -405,6 +405,22 @@ element.style {
   float:right;
   padding: 20px;
   margin-right: -80px;
+}
+
+.blogpost .rich-text h4 {
+  display: block;
+  max-width: 60%;
+  margin: 40px auto;
+  font-size: 22px;
+  font-style: italic;
+  color: #3d3d3d;
+}
+
+@media(max-width:800px) {
+  .blogpost .rich-text h4 {
+    display: block;
+    max-width: 90%;
+  }
 }
 
 @media(max-width:800px) {
