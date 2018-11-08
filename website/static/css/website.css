@@ -431,6 +431,11 @@ element.style {
   }
 }
 
+.blogpost .rich-text ol {
+  max-width: 80%;
+  margin: 20px auto;
+}
+
 @media(max-width:800px) {
   .blogpost .rich-text img.left {
     max-width: 100%;
