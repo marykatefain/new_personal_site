@@ -414,6 +414,7 @@ element.style {
   font-size: 22px;
   font-style: italic;
   color: #3d3d3d;
+  text-align: center;
 }
 
 @media(max-width:800px) {
