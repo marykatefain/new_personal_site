@@ -418,7 +418,8 @@ element.style {
 }
 
 .blogpost img.full-width {
-  margin: 50px auto;
+  margin: 25px auto;
+  text-align: center;
 }
 
 .blogpost .rich-text img.left {
