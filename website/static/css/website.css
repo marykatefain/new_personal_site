@@ -380,6 +380,32 @@ element.style {
   font-size: 18px;
 }
 
+.blogpost .rich-text h4 {
+  display: block;
+  max-width: 60%;
+  margin: 40px auto;
+  font-size: 22px;
+  font-style: italic;
+  color: #3d3d3d;
+  text-align: center;
+}
+
+@media(max-width:800px) {
+  .blogpost .rich-text h4 {
+    display: block;
+    max-width: 90%;
+  }
+}
+
+.blogpost .rich-text ol {
+  max-width: 90%;
+  margin: 20px auto;
+}
+
+.blogpost .rich-text li {
+  padding: 10px;
+}
+
 .blogpost img {
   max-width: 800px;
 }
@@ -389,6 +415,10 @@ element.style {
     max-width: 100%;
     padding: 20px;
   }
+}
+
+.blogpost img.full-width {
+  margin: 50px auto;
 }
 
 .blogpost .rich-text img.left {
@@ -407,33 +437,11 @@ element.style {
   margin-right: -80px;
 }
 
-.blogpost .rich-text h4 {
-  display: block;
-  max-width: 60%;
-  margin: 40px auto;
-  font-size: 22px;
-  font-style: italic;
-  color: #3d3d3d;
-  text-align: center;
-}
-
-@media(max-width:800px) {
-  .blogpost .rich-text h4 {
-    display: block;
-    max-width: 90%;
-  }
-}
-
 @media(max-width:800px) {
   .blogpost .rich-text img {
     width: 100%;
     height: auto;
   }
-}
-
-.blogpost .rich-text ol {
-  max-width: 80%;
-  margin: 20px auto;
 }
 
 @media(max-width:800px) {
