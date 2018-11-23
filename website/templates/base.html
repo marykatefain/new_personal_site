@@ -34,14 +34,14 @@
         {% endwith %}
 
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://marykatefain.com">
+        <meta property="og:url" content="https://marykatefain.com{{ self.url }}">
 
         {% if self.listing_image %}
           {% image self.listing_image fill-600x400 as image %}
-          <meta property="og:image" content="{{ image.url }}" alt="{{ image.alt }}">
+          <meta property="og:image" content="https://marykatefain.com{{ image.url }}" alt="{{ image.alt }}">
           <meta property="og:image:alt" content="{{ image.alt }}">
         {% else %}
-          <meta property="og:image" content="/static/images/icon.png">
+          <meta property="og:image" content="https://marykatefain.com/static/images/icon.png">
           <meta property="og:image:alt" content="Mary Kate Fain">
         {% endif %}
 
