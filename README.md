@@ -24,3 +24,11 @@ python manage.py runserver
 ```
 git push dokku master
 ```
+
+## Pull Database
+
+```
+scp root@marykatefain.com:/var/lib/dokku/data/storage/mkf/db.sqlite3 .
+scp -r root@marykatefain.com:"/var/lib/dokku/data/storage/mkf/media/*" ./media/
+
+```

@@ -39,6 +39,7 @@ class BlogIndexPage(Page):
 
 
 class BlogPostPage(Page):
+    external_link = models.URLField(max_length=200, help_text='Link to the original source', blank=True, null=True)
     headline = models.CharField(max_length=255, blank=True, null=True)
     subtitle = models.CharField(max_length=255, blank=True, null=True)
     body = RichTextField(blank=True, null=True)
@@ -52,6 +53,7 @@ class BlogPostPage(Page):
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
 
     content_panels = Page.content_panels + [
+        FieldPanel('external_link'),
         FieldPanel('headline'),
         FieldPanel('subtitle'),
         FieldPanel('body'),

@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: wagalytics
+Version: 1.0rc1
+Summary: Show Google Analytics data in Wagtail.
+Home-page: https://github.com/tomdyson/wagalytics
+Author: Tom Dyson
+Author-email: tom+wagalytics@torchbox.com
+License: MIT
+Keywords: development
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Dist: wagtail (>=0.8.7)
+Requires-Dist: Django (>=1.7.1)
+Requires-Dist: google-api-python-client (==1.5.5)
+Requires-Dist: oauth2client (<3,>=2.0.0)
+Requires-Dist: wagtailfontawesome (>=1.0.2)
+Requires-Dist: pyexcel-ods (==0.5.3)
+
+See https://github.com/tomdyson/wagalytics for details
+
+
