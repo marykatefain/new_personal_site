@@ -95,6 +95,20 @@ a .banner h1.header:hover{
   position: relative;
 }
 
+@media(max-width:999px) {
+  .ui.home.blog.container {
+    flex-direction: column;
+    height: auto;
+    width: 600px;
+  }
+}
+
+@media(max-width:999px) {
+  .ui.blog.header {
+    text-align: center;
+  }
+}
+
 .ui.home.blog.container .home_blog_fill_link {
   position: absolute;
   width: 100%;
@@ -121,6 +135,14 @@ a .banner h1.header:hover{
   height: 325px;
   border-radius: 3px;
 }
+
+@media(max-width:999px) {
+  .ui.home.blog.container .preview.image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 
 /* CARDS */
 
