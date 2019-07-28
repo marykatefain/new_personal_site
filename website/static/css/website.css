@@ -249,11 +249,19 @@ element.style {
 
 /* RESUME */
 
+.template-resumepage a {
+  color: #716482;
+}
+
+.template-resumepage a:hover {
+  color: #6b6b6b;
+}
+
 .template-resumepage .ui.resume.container {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @media(max-width:900px) {
@@ -273,6 +281,7 @@ element.style {
 }
 
 .template-resumepage .ui.header {
+  margin-bottom: 40px;
   font-family: 'Karla', sans-serif;
 }
 
@@ -288,6 +297,7 @@ element.style {
 
 .resume .sidebar {
  max-width: 300px;
+ margin-left: 40px;
 }
 
 @media(max-width:900px) {
@@ -378,6 +388,14 @@ element.style {
   max-width: 800px;
   margin: 0px auto;
   font-size: 18px;
+}
+
+.blogpost a {
+  color: #716482;
+}
+
+.blogpost a:hover {
+  color: #6b6b6b;
 }
 
 .blogpost .rich-text h4 {
