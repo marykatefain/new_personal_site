@@ -10,6 +10,8 @@ from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel, MultiField
 
 from website.blocks import ImageInfoSection, PortalCard
 
+from website.blog.models import BlogIndexPage, BlogPostPage
+
 
 class HomePage(Page):
     subtitle = models.CharField(max_length=255, blank=True, null=True)
@@ -29,3 +31,8 @@ class HomePage(Page):
         StreamFieldPanel('portal_cards'),
         StreamFieldPanel('body'),
     ]
+
+    def get_context(self, request):
+        context = super(HomePage, self).get_context(request)
+        context['latest_blog'] = BlogPostPage.objects.live().order_by('-first_published_at')[0].specific
+        return context

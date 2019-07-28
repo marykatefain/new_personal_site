@@ -83,6 +83,45 @@ a .banner h1.header:hover{
   border-top: 1px solid #6b6b6b;
 }
 
+/* HOME */
+
+.ui.home.blog.container {
+  border: 1px solid rgba(34,36,38,.1);
+  border-radius: 3px;
+  display: flex;
+  margin-top: 20px;
+  height: 325px;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  position: relative;
+}
+
+.ui.home.blog.container .home_blog_fill_link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.ui.home.blog.container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1px 3px 0 #bcbdbd, 0 0 0 1px #d4d4d5;
+  cursor: pointer;
+}
+
+.ui.home.blog.container a {
+  color: #716482;
+}
+
+.ui.home.blog.container .preview.content {
+  margin: 30px;
+}
+
+.ui.home.blog.container .preview.image img {
+  margin: 0px;
+  height: 325px;
+  border-radius: 3px;
+}
+
 /* CARDS */
 
 .ui.cards {
@@ -102,6 +141,7 @@ a .banner h1.header:hover{
 
 .block-portfolio_cards .meta {
   margin-top: 5px;
+  color: #716482;
 }
 
 .block-portal_card {
@@ -112,7 +152,7 @@ a .banner h1.header:hover{
 }
 
 .block-portal_card p {
-  color: #6b6b6b;
+  color: black;
 }
 
 .block-portal_card a {
