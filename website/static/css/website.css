@@ -489,3 +489,7 @@ footer a {
 footer a:hover {
   color: white;
 }
+
+footer .patreon-widget {
+  margin-top: 10px;
+}
