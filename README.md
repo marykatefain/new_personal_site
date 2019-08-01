@@ -7,16 +7,18 @@ Deployed with dokku.
 ## To run locally
 
 First, clone the repo. Then, inside the project folder:
-```
-pip install -r requirements.txt
-```
 
 ```
-python manage.py migrate
-```
+python3 -m venv env
 
-```
-python manage.py runserver
+source env/bin/activate
+
+pip3 install -r requirements.txt
+
+python3 manage.py migrate
+
+python3 manage.py runserver
+
 ```
 
 ## To Deploy

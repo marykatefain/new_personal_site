@@ -4,4 +4,4 @@ __pycache__
 media
 /static
 analytics.json
-env/*
+/env
