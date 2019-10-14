@@ -6,19 +6,45 @@ Deployed with dokku.
 
 ## To run locally
 
-First, clone the repo. Then, inside the project folder:
+### Initial setup
 
+```sh
+sudo -H pip3 install mkvirtualenvwrapper
 ```
-python3 -m venv env
 
-source env/bin/activate
+Add the following lines to the bottom of `~/.bashrc`:
 
-pip3 install -r requirements.txt
+```sh
+# Virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Projects
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
+```
 
-python3 manage.py migrate
+Create the virtualenv:
 
-python3 manage.py runserver
+```sh
+mkvirtualenv mk_website
+```
 
+Clone the repo. Then, inside the project folder:
+
+```sh
+workon mk_website
+
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+
+### Each time
+
+When returning to the project, change into the project directory and run:
+
+```sh
+workon mk_website
+python manage.py runserver
 ```
 
 ## To Deploy
