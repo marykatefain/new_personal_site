@@ -14,12 +14,13 @@ from website.blog.models import BlogIndexPage, BlogPostPage
 
 
 class HomePage(Page):
+    displaytitle = models.CharField(max_length=255, blank=True, null=True)
     subtitle = models.CharField(max_length=255, blank=True, null=True)
-    portal_cards = StreamField(
-        [
-            ('portal_card', PortalCard())
-        ]
-    )
+    # portal_cards = StreamField(
+    #     [
+    #         ('portal_card', PortalCard())
+    #     ]
+    # )
     body = StreamField(
         [
             ('image_info_section', ImageInfoSection())
@@ -27,12 +28,13 @@ class HomePage(Page):
     )
 
     content_panels = Page.content_panels + [
+        FieldPanel('displaytitle'),
         FieldPanel('subtitle'),
-        StreamFieldPanel('portal_cards'),
+        # StreamFieldPanel('portal_cards'),
         StreamFieldPanel('body'),
     ]
 
-    def get_context(self, request):
-        context = super(HomePage, self).get_context(request)
-        context['latest_blog'] = BlogPostPage.objects.live().order_by('-first_published_at')[0].specific
-        return context
+    # def get_context(self, request):
+    #     context = super(HomePage, self).get_context(request)
+    #     context['latest_blog'] = BlogPostPage.objects.live().order_by('-first_published_at')[0].specific
+    #     return context

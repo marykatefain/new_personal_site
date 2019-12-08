@@ -5,9 +5,10 @@ from wagtail.images.blocks import ImageChooserBlock
 
 
 class ImageInfoSection(blocks.StructBlock):
-    headline = blocks.CharBlock(required=False)
+    headline = blocks.CharBlock(required=True)
+    slug = blocks.CharBlock(required=True)
     body = blocks.RichTextBlock(required=False)
-    image = ImageChooserBlock()
+    image = ImageChooserBlock(required=False)
 
     class Meta:
         template = 'website/blocks/image_info_section.html'

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+<div class="ui container">
+
+  <div class="ui container">
+    <h2 class="ui center aligned header main">{{ self.subtitle }}</h2>
+    <div class="ui link stackable cards">
+        {% include_block page.portal_cards %}
+    </div>
+  </div>
+
+  {% if latest_blog %}
+    <h2 class="ui blog header">Latest Post:</h2>
+
+    <div class="ui home blog container">
+
+      {% if latest_blog.external_link %}
+        <a href="{{ latest_blog.external_link }}" target="_blank" class="home_blog_fill_link"></a>
+      {% else %}
+        <a href="{{ latest_blog.url }}"></a>
+      {% endif %}
+
+      <div class="preview image">
+        {% image latest_blog.listing_image fill-600x400 as image %}
+          <img src="{{ image.url }}" alt="{{ image.alt }}">
+      </div>
+      <div class="preview content">
+        <h2>{{ latest_blog.headline }}</h2>
+        {% if latest_blog.subtitle %}
+          <h3>{{ latest_blog.subtitle }}</h3>
+        {% endif %}
+        <p>{{ latest_blog.first_published_at }}</p>
+        <p>{{ latest_blog.body | richtext | truncatewords_html:35 }}</p>
+      </div>
+    </div>
+
+  {% endif %}
+
+  <div class="ui container">
+    {% include_block page.body %}
+  </div>
+
+</div>
+{% endblock %}

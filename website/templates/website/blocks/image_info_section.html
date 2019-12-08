@@ -1,6 +1,6 @@
 {% load wagtailimages_tags %}
 
-
+<span id="section-{{self.slug}}"> </span>
 <div class="image-info ui segment">
 
   <div class="profile-img">
@@ -8,7 +8,7 @@
     <img class="ui medium circular image" src="{{ image.url }}" alt="{{ image.alt }}">
   </div>
   <div class="about">
-    <h2 class="ui center aligned header">{{ self.headline }}</h2>
+    <h2 class="ui center aligned header">{{ self.headline }} {{self.slug}}</h2>
     {{ self.body }}
   </div>
 </div>

@@ -88,7 +88,21 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
         <header>
+          <a href="/">
+            <div class="banner">
+              <h1 class="header">M. K. Fain</h1>
+            </div>
+          </a>
 
+          <nav>
+            <div class="ui grey four item stackable menu">
+              {% for item in request.site.root_page.get_children.live.in_menu %}
+              <a class="item" href="{{ item.url }}">
+                {{ item }}
+              </a>
+              {% endfor %}
+            </div>
+          </nav>
         </header>
 
         <div class="main-content">
@@ -119,7 +133,7 @@
           <!--End mc_embed_signup-->
           <div class="ui inverted section divider"></div>
           <div class="ui center aligned footer container">
-            <!-- <div class="ui stackable inverted divided grid">
+            <div class="ui stackable inverted divided grid">
               <div class="five wide column">
                 <h4 class="ui inverted header">Learn More</h4>
                 <div class="ui inverted link list">
@@ -149,7 +163,7 @@
                 </div>
               </div>
             </div>
-            <div class="ui inverted section divider"></div>-->
+            <div class="ui inverted section divider"></div>
             <p>Sharing is caring. Licensed under the AGPL 3.0. Source available on <a href="https://github.com/marykatefain/new_personal_site" target="_blank">GitHub</a>.</p>
           </div>
         </div>
