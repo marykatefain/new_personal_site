@@ -368,6 +368,7 @@ element.style {
 /* INFO SECTION STYLES */
 
 .image-info.ui.segment{
+  background-color: #fafafb;
   display: flex;
   justify-content: space-around;
   border: none;
