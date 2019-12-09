@@ -14,6 +14,16 @@ class ImageInfoSection(blocks.StructBlock):
         template = 'website/blocks/image_info_section.html'
         icon = 'fa-paragraph'
 
+class HomeSection(blocks.StructBlock):
+    headline = blocks.CharBlock(required=True)
+    slug = blocks.CharBlock(required=True)
+    body = blocks.RichTextBlock(required=False)
+    image = ImageChooserBlock(required=False)
+
+    class Meta:
+        template = 'website/blocks/home_section.html'
+        icon = 'fa-paragraph'
+
 
 class PortalCard(blocks.StructBlock):
     link = blocks.ListBlock(blocks.PageChooserBlock())

@@ -3,19 +3,21 @@
 {% load wagtailimages_tags %}
 
 
-<!-- {% block body_class %}template-homepage{% endblock %} -->
+{% block body_class %}new-template-homepage{% endblock %}
 
 {% block content %}
-<div class="ui container">
-  <h1 class="ui center aligned header main">{{ self.displaytitle }}</h1>
-  <nav>
-    {% for section in page.body %}
-      <a href="/#section-{{section.value.slug}}">{{ section.value.headline }}</a>
-    {% endfor %}
-  </nav>
+<div class="ui container home-very-outer">
+  <h1 class="header main display-title">{{ self.displaytitle }}</h1>
+  <div class="home-outer-container">
+    <nav class="home-side-nav">
+      {% for section in page.body %}
+        <div class="nav-item"><a href="/#section-{{section.value.slug}}">{{ section.value.headline }}</a></div>
+      {% endfor %}
+    </nav>
 
-  <div class="ui container">
-    {% include_block page.body %}
+    <div class="ui container home-sections">
+      {% include_block page.body %}
+    </div>
   </div>
 
 </div>

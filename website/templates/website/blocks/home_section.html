@@ -1,0 +1,19 @@
+{% load wagtailimages_tags %}
+
+<span id="section-{{self.slug}}"> </span>
+<div class="home-section image-info ui segment">
+
+  <div class="about text">
+    <h2 class="ui left aligned header">{{ self.headline }}</h2>
+
+    <!-- {% if self.image %}
+    <div class="profile-img">
+      {% image self.image fill-600x600 as image %}
+      <img class="ui medium circular image" src="{{ image.url }}" alt="{{ image.alt }}">
+    </div>
+    {% endif %} -->
+    <div class="content">
+      {{ self.body }}
+    </div>
+  </div>
+</div>

@@ -8,7 +8,7 @@ from wagtail.core.fields import StreamField
 
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel, MultiFieldPanel
 
-from website.blocks import ImageInfoSection, PortalCard
+from website.blocks import ImageInfoSection, PortalCard, HomeSection
 
 from website.blog.models import BlogIndexPage, BlogPostPage
 
@@ -23,7 +23,7 @@ class HomePage(Page):
     # )
     body = StreamField(
         [
-            ('image_info_section', ImageInfoSection())
+            ('home_section', HomeSection())
         ]
     )
 
