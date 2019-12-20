@@ -581,6 +581,20 @@ element.style {
   color: #6b6b6b;
 }
 
+.blog.container h3 a {
+  color: #716482;
+}
+
+.blog.container h3 a:hover {
+  color: #6b6b6b;
+}
+
+@media(max-width:600px) {
+  .blog.container img {
+    width: 90%;
+  }
+}
+
 .blogpost .rich-text h4 {
   display: block;
   max-width: 60%;
