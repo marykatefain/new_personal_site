@@ -184,6 +184,7 @@ div.ui.container.home-very-outer {
 
 .home-sections h2 {
   text-align: left;
+  padding-left: 0 !important;
 }
 
 div.ui.segment.home-section.image-info {
