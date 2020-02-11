@@ -139,10 +139,23 @@ div.ui.container.home-very-outer {
 
 @media(max-width:800px) {
   .home-side-nav .nav-item {
+    width: 20%;
+    margin-bottom: 10px;
+  }
+}
+
+@media(max-width:600px) {
+  .home-side-nav .nav-item {
     width: 30%;
     margin-bottom: 10px;
   }
+}
 
+@media(max-width:400px) {
+  .home-side-nav .nav-item {
+    width: 45%;
+    margin-bottom: 10px;
+  }
 }
 
 .home-side-nav .nav-item a {
