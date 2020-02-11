@@ -22,11 +22,12 @@ body {
 }
 
 .banner {
-  background-image: url(../images/succulents.jpg);
+  background-image: url(../images/banner.jpg);
   background-position: center;
+  vertical-align: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 300px;
   position: relative;
   max-width: 2000px;
 }
@@ -80,7 +81,8 @@ a .banner h1.header:hover{
 }
 
 .container {
-  margin: 80px auto;
+  margin: 0px auto;
+  padding-top: 40px;
   max-width: 1000px;
 }
 
@@ -129,9 +131,18 @@ div.ui.container.home-very-outer {
   .home-side-nav {
     margin-top: 0px;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     height: auto;
   }
+}
+
+@media(max-width:800px) {
+  .home-side-nav .nav-item {
+    width: 30%;
+    margin-bottom: 10px;
+  }
+
 }
 
 .home-side-nav .nav-item a {
@@ -152,8 +163,9 @@ div.ui.container.home-very-outer {
 
 @media(max-width:800px) {
   .ui.container.home-sections {
+    padding-top: 0;
     max-width: 100% !important;
-    margin-left: 10px !important;
+    margin: 0px !important;
   }
 }
 
