@@ -1,4 +1,4 @@
-wagtail==2.2.2
+wagtail==2.7.4
 whitenoise==4.1
 uwsgi==2.0.17
 wagalytics==1.0rc1
